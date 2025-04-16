@@ -1,16 +1,20 @@
-import { Router, Route, Routes } from 'react-router-dom';
+import { Router, Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import './App.css';
+
 import Home from './pages/Home';
+import Layout from './components/Layout';
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename='/see-world-project/'>
       <Routes>
-        <Route path="/" element={<Layout/>}></Route>
+        <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>}></Route>
+        </Route>
+        <Route path='*' element={<Navigate to="/" replace></Navigate>}></Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 

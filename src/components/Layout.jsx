@@ -1,11 +1,11 @@
 import { NavLink, Outlet } from "react-router-dom";
-import logo from "../../public/logo.png"
+import logo from "../assets/logo.png"
 
 const Layout = () => {
     return ( <>
     <header>
-        <div>
-            <img src={logo} alt="See world"/>
+        <div className="logo-block">
+            <img src={logo} alt="See world" className="logo-img"/>
             <p className="logo-name">See World</p>
         </div>
         <nav>
