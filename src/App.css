@@ -1,63 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Play:regular,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import "normalize.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-header{
- height: 100px;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 12px 80px; 
- background-color: #CFE7F5;
- font-family: "Play";
- color: #266294;
- box-sizing: border-box;
-}
 
-*{
-  outline: 2px solid #0f0;
-}
 
-.logo-block{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-
-}
-
-.logo-img{
-  width: 55px;
-  height: auto;
-}
-
-nav{
-  display: flex;
-  gap: 60px;
-}
-nav a{
-  font-size: 20px;
-  font-weight: 700;
-  font-family: "Play";
-  color: #266294;
-  text-decoration: none;
-}
-
-.regist-btn{
-  border: 1px solid #266294;
-  background-color: transparent;
-  height: 44px;
-  width: 209px;
-  font-family: "Play";
-  color: #266294;
-  font-weight: 700;
-  font-size: 20px;
+body{
+  background-color: #EBF8FF;
 }
 
 .Hero{
   background-image: url("./assets/Hero.png");
   height: calc(100dvh - 100px);
   width: 100%;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+section{
+  padding: 40px 80px;
+}
+
+footer{
+  background: #CFE7F5;
 }

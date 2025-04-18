@@ -7,7 +7,7 @@ import Layout from './components/Layout';
 
 function App() {
   return (
-    <BrowserRouter basename='/see-world-project/'>
+    <BrowserRouter basename='/see-world-project'>
       <Routes>
         <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>}></Route>
