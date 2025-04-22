@@ -20,7 +20,7 @@ const Layout = () => {
           <NavLink to="/" className="text-lg font-bold">
             Головна
           </NavLink>
-          <NavLink to="/all" className="text-lg font-bold">
+          <NavLink to="/ogolosh" className="text-lg font-bold">
             Оголошення
           </NavLink>
           <NavLink to="/favorite" className="text-lg font-bold">
@@ -90,7 +90,7 @@ const Layout = () => {
               <NavLink to="/" className="text-lg font-bold">
                 Головна
               </NavLink>
-              <NavLink to="/all" className="text-lg font-bold">
+              <NavLink to="/ogolosh" className="text-lg font-bold">
                 Оголошення
               </NavLink>
               <NavLink to="/favorite" className="text-lg font-bold">
