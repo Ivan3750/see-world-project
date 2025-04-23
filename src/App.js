@@ -1,9 +1,13 @@
-import { Router, Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
+import {  Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import './App.css';
+import React, {  lazy } from 'react';
 
-import Home from './pages/Home';
-import Layout from './components/Layout';
-import Ogolosh from './pages/Ogolosh'; 
+
+const Home = lazy(() => import('./pages/Home')); 
+const Layout = lazy(() => import('./components/Layout')); 
+const Ogolosh = lazy(() => import('./pages/Ogolosh'));
+
+
 
 function App() {
   return (

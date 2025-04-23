@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import "./ogolosh.css";
-
+import img1 from "./images/Welcomehotel.png"
+import img2 from "./images/image_2.png"
+import img3 from "./images/image3.png"
+import img4 from "./images/img4.png"
+import img5 from "./images/img5.jpg"
+import img6 from "./images/img6.jpg"
+import img7 from "./images/img7.jpg"
+import img8 from "./images/img8.jpg"
+import img9 from "./images/img9.jpg"
+import img10 from "./images/img10.jpg"
+import img11 from "./images/img11.jpg"
+import img12 from "./images/img12.jpg"
+import img13 from "./images/img13.jpg"
+import img14 from "./images/img14.jpg"
+import img15 from "./images/img15.jpg"
+import img16 from "./images/img16.jpg"
 
 const Ogolosh = () => {
   const [filters, setFilters] = useState({
@@ -25,7 +40,7 @@ const Ogolosh = () => {
       category: "house",
       type: "offering",
       country: "Italy",
-      image: "/images/Welcomehotel.jpg",
+      image: img1,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -36,7 +51,7 @@ const Ogolosh = () => {
       category: "apartment",
       type: "offering",
       country: "Spain",
-      image: "/images/almoio5.jpg",
+      image: img2,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -47,7 +62,7 @@ const Ogolosh = () => {
       category: "studio",
       type: "lookingFor",
       country: "Greece",
-      image: "/images/just-be-and-b.jpg",
+      image: img3,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -58,7 +73,7 @@ const Ogolosh = () => {
       category: "house",
       type: "offering",
       country: "Hungary",
-      image: "/images/homes.jpg",
+      image: img4,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -69,7 +84,7 @@ const Ogolosh = () => {
       category: "apartment",
       type: "offering",
       country: "Turkey",
-      image: "/images/downtown-homes-relax.jpg",
+      image: img5,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -80,7 +95,7 @@ const Ogolosh = () => {
       category: "house",
       type: "offering",
       country: "Poland",
-      image: "/images/pair-of-kings.jpg",
+      image: img6,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -91,7 +106,7 @@ const Ogolosh = () => {
       category: "apartment",
       type: "offering",
       country: "Austria",
-      image: "/images/design-apartment-in-party.jpg",
+      image: img7,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -102,7 +117,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Azerbaijan",
-      image: "/images/adagio-downtown-minihotel.jpg",
+      image: img8,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -113,7 +128,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Poland",
-      image: "/images/benczur-hotel.jpg",
+      image: img9,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -124,7 +139,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Portugal",
-      image: "/images/easy-star-hotel.jpg",
+      image:   img10,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -135,7 +150,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Greece",
-      image: "/images/silver-hotel.jpg",
+      image: img11,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -146,7 +161,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Spain",
-      image: "/images/erzsebet-hotel.jpg",
+      image: img12,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -157,7 +172,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Spain",
-      image: "/images/kvihotel.jpg",
+      image: img13,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -168,7 +183,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Spain",
-      image: "/images/petit-hotel.jpg",
+      image: img14,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -179,7 +194,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "France",
-      image: "/images/le-galion-hotel.jpg",
+      image: img15,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -190,7 +205,7 @@ const Ogolosh = () => {
       category: "hotel",
       type: "offering",
       country: "Portugal",
-      image: "/images/vila-gale-lagos-hotel.jpg",
+      image: img16,
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
@@ -252,13 +267,16 @@ const Ogolosh = () => {
             <button className="close-button" onClick={closeModal}>
               ×
             </button>
-            <img src={selectedListing.image} alt={selectedListing.name} className="modal-image" />
             <h2>{selectedListing.name}</h2>
+            <img src={selectedListing.image} alt={selectedListing.name} className="modal-image" />
+            
             <p><strong>Локація:</strong> {selectedListing.location}</p>
             <p><strong>Опис:</strong> {selectedListing.description}</p>
             <p><strong>Ціна:</strong> {selectedListing.price}</p>
+            <div className="btncont">
             <button className="modal-button">Додати до обраного</button>
             <button className="modal-button">Забронювати</button>
+            </div>
           </div>
         </div>
       )}
