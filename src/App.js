@@ -6,6 +6,9 @@ import React, {  lazy } from 'react';
 const Home = lazy(() => import('./pages/Home')); 
 const Layout = lazy(() => import('./components/Layout')); 
 const Ogolosh = lazy(() => import('./pages/Ogolosh'));
+const Regestation = lazy(() => import('./pages/Regestation'));
+const LogIn = lazy(() => import('./pages/LogIn'));
+const Reset = lazy(() => import('./pages/Reset'));
 
 
 
@@ -15,7 +18,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="ogolosh" element={<Ogolosh />} /> 
+          <Route path="/advert" element={<Ogolosh />} />
+          <Route path="/regestation" element={<Regestation />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/reset" element={<Reset />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
