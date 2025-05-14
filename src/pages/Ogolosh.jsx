@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import "./ogolosh.css";
-import img1 from "./images/Welcomehotel.png"
-import img2 from "./images/image_2.png"
-import img3 from "./images/image3.png"
-import img4 from "./images/img4.png"
-import img5 from "./images/img5.jpg"
-import img6 from "./images/img6.jpg"
-import img7 from "./images/img7.jpg"
-import img8 from "./images/img8.jpg"
-import img9 from "./images/img9.jpg"
-import img10 from "./images/img10.jpg"
-import img11 from "./images/img11.jpg"
-import img12 from "./images/img12.jpg"
-import img13 from "./images/img13.jpg"
-import img14 from "./images/img14.jpg"
-import img15 from "./images/img15.jpg"
-import img16 from "./images/img16.jpg"
+import "../styles/ogolosh.css";
+import img1 from "../assets/images/Welcomehotel.png"
+import img2 from "../assets/images/image_2.png"
+import img3 from "../assets/images/image3.png"
+import img4 from "../assets/images/img4.png"
+import img5 from "../assets/images/img5.jpg"
+import img6 from "../assets/images/img6.jpg"
+import img7 from "../assets/images/img7.jpg"
+import img8 from "../assets/images/img8.jpg"
+import img9 from "../assets/images/img9.jpg"
+import img10 from "../assets/images/img10.jpg"
+import img11 from "../assets/images/img11.jpg"
+import img12 from "../assets/images/img12.jpg"
+import img13 from "../assets/images/img13.jpg"
+import img14 from "../assets/images/img14.jpg"
+import img15 from "../assets/images/img15.jpg"
+import img16 from "../assets/images/img16.jpg"
 
 const Ogolosh = () => {
   const [filters, setFilters] = useState({
