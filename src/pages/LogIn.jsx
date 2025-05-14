@@ -94,9 +94,12 @@ const Login = () => {
         />
       </div>
 
-      <p className="text-[#766F6F] font-normal text-[18px] text-center block underline mt-[10px]">
+      <Link
+        to="/reset"
+        className="text-[#766F6F] font-normal text-[18px] text-center block underline mt-[10px]"
+      >
         Забули пароль?
-      </p>
+        </Link>
 
       <button
         type="submit"

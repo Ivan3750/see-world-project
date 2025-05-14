@@ -17,7 +17,7 @@ app.use(express.json())
 app.use("/api/auth", authRoutes)
 
 
-const clientPath = path.join(__dirname, "../build")
+const clientPath = path.join(__dirname, "/build")
 
 if (fs.existsSync(clientPath)) {
   console.log("🧠 React клієнт підключено з:", clientPath)
