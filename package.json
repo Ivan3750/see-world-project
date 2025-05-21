@@ -2,8 +2,9 @@
   "name": "route-p",
   "version": "0.1.0",
   "private": true,
-"homepage": "/see-world-project",
+  "homepage": "/see-world-project",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/postcss": "^4.1.4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

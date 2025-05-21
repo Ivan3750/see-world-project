@@ -1,15 +1,19 @@
+import { createReducer } from "@reduxjs/toolkit";
+import { OpenModal, CloseModal } from "./action";
+
 const initialState = {
   isOpen: false,
   selectedListing: null,
 };
 
-export const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case "OPEN_MODAL":
-      return { ...state, isOpen: true, selectedListing: action.payload };
-    case "CLOSE_MODAL":
-      return { ...state, isOpen: false, selectedListing: null };
-    default:
-      return state;
-  }
-}
+export const reducer = createReducer(initialState, (builder) => {
+  builder.addCase(OpenModal, (state, action) => {
+    state.isOpen = true;
+    state.selectedListing = action.payload;
+  })
+
+    builder.addCase(CloseModal, (state, action) => {
+      state.isOpen = false;
+      state.selectedListing = null;
+    });
+});

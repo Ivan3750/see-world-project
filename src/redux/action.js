@@ -1,8 +1,7 @@
-export const OpenModal = (listing) => ({
-  type: "OPEN_MODAL",
-  payload: listing
-})
+import { createAction } from "@reduxjs/toolkit"
 
-export const CloseModal = () => ({
-  type: "CLOSE_MODAL"
-})
+
+export const OpenModal = createAction("OPEN_MODAL")
+export const CloseModal = createAction("CLOSE_MODAL")
+
+
