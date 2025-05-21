@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/see-world-project/static/css/main.06873f3e.css",
-    "main.js": "/see-world-project/static/js/main.a4996898.js",
+    "main.js": "/see-world-project/static/js/main.0ad070ae.js",
     "static/js/609.a1a4aa55.chunk.js": "/see-world-project/static/js/609.a1a4aa55.chunk.js",
     "static/js/639.956fcecf.chunk.js": "/see-world-project/static/js/639.956fcecf.chunk.js",
-    "static/css/800.68f15054.chunk.css": "/see-world-project/static/css/800.68f15054.chunk.css",
-    "static/js/800.cb6722e9.chunk.js": "/see-world-project/static/js/800.cb6722e9.chunk.js",
+    "static/css/37.259c767c.chunk.css": "/see-world-project/static/css/37.259c767c.chunk.css",
+    "static/js/37.b4fa9196.chunk.js": "/see-world-project/static/js/37.b4fa9196.chunk.js",
     "static/js/524.4bf833e6.chunk.js": "/see-world-project/static/js/524.4bf833e6.chunk.js",
     "static/js/374.fe7679d7.chunk.js": "/see-world-project/static/js/374.fe7679d7.chunk.js",
     "static/js/880.7008cd48.chunk.js": "/see-world-project/static/js/880.7008cd48.chunk.js",
@@ -55,17 +55,17 @@
     "static/media/star.svg": "/see-world-project/static/media/star.c78f5678bd6d176c51c05f1473e223cb.svg",
     "static/media/facebook.svg": "/see-world-project/static/media/facebook.8f53edaf1c0557e56c8c5f567aec9b9c.svg",
     "main.06873f3e.css.map": "/see-world-project/static/css/main.06873f3e.css.map",
-    "main.a4996898.js.map": "/see-world-project/static/js/main.a4996898.js.map",
+    "main.0ad070ae.js.map": "/see-world-project/static/js/main.0ad070ae.js.map",
     "609.a1a4aa55.chunk.js.map": "/see-world-project/static/js/609.a1a4aa55.chunk.js.map",
     "639.956fcecf.chunk.js.map": "/see-world-project/static/js/639.956fcecf.chunk.js.map",
-    "800.68f15054.chunk.css.map": "/see-world-project/static/css/800.68f15054.chunk.css.map",
-    "800.cb6722e9.chunk.js.map": "/see-world-project/static/js/800.cb6722e9.chunk.js.map",
+    "37.259c767c.chunk.css.map": "/see-world-project/static/css/37.259c767c.chunk.css.map",
+    "37.b4fa9196.chunk.js.map": "/see-world-project/static/js/37.b4fa9196.chunk.js.map",
     "524.4bf833e6.chunk.js.map": "/see-world-project/static/js/524.4bf833e6.chunk.js.map",
     "374.fe7679d7.chunk.js.map": "/see-world-project/static/js/374.fe7679d7.chunk.js.map",
     "880.7008cd48.chunk.js.map": "/see-world-project/static/js/880.7008cd48.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06873f3e.css",
-    "static/js/main.a4996898.js"
+    "static/js/main.0ad070ae.js"
   ]
 }
