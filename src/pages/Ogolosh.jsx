@@ -16,16 +16,18 @@ import img13 from "../assets/images/img13.jpg"
 import img14 from "../assets/images/img14.jpg"
 import img15 from "../assets/images/img15.jpg"
 import img16 from "../assets/images/img16.jpg"
+import { useDispatch, useSelector } from "react-redux";
+import { CloseModal, OpenModal } from "../redux/action";
 
 const Ogolosh = () => {
+  const dispatch = useDispatch()
   const [filters, setFilters] = useState({
     listingType: "all",
     category: "all",
     country: "",
   });
 
-
-  const [selectedListing, setSelectedListing] = useState(null);
+const isOpen = useSelector(state => state.isOpen)
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -219,13 +221,7 @@ const Ogolosh = () => {
   });
   
 
-  const openModal = (listing) => {
-    setSelectedListing(listing);
-  };
 
-  const closeModal = () => {
-    setSelectedListing(null);
-  };
 
   return (
     <div>
@@ -249,7 +245,7 @@ const Ogolosh = () => {
       <div className="listings-section">
         {filteredListings.length > 0 ? (
           filteredListings.map((listing, index) => (
-            <div key={index} className="listing" onClick={() => openModal(listing)}>
+            <div key={index} className="listing" onClick={() => dispatch(OpenModal(true))}>
               <img src={listing.image} alt={listing.name} className="listing-image" />
               <h2>{listing.name}</h2>
               <p>{listing.location}</p>
@@ -261,10 +257,10 @@ const Ogolosh = () => {
         )}
       </div>
 
-      {selectedListing && (
+      {isOpen && (
         <div className="modal">
-          <div className="modal-content">
-            <button className="close-button" onClick={closeModal}>
+         <div className="modal-content">
+            <button className="close-button" onClick={()=> dispatch(CloseModal(false))}>
               ×
             </button>
             <h2>{selectedListing.name}</h2>
@@ -277,7 +273,7 @@ const Ogolosh = () => {
             <button className="modal-button">Додати до обраного</button>
             <button className="modal-button">Забронювати</button>
             </div>
-          </div>
+          </div> 
         </div>
       )}
     </div>
