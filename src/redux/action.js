@@ -1,9 +1,8 @@
-export const OpenModal = (isOpen) =>({
-    type: "OPEN_MODAL",
-    payload: isOpen
+export const OpenModal = (listing) => ({
+  type: "OPEN_MODAL",
+  payload: listing
 })
 
-export const CloseModal = (isOpen) =>({
-    type: "CLOSE_MODAL",
-    payload: isOpen
+export const CloseModal = () => ({
+  type: "CLOSE_MODAL"
 })

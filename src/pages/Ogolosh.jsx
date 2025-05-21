@@ -20,16 +20,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { CloseModal, OpenModal } from "../redux/action";
 
 const Ogolosh = () => {
-  const dispatch = useDispatch();
+   const dispatch = useDispatch();
+  const isOpen = useSelector(state => state.isOpen);
+
   const [filters, setFilters] = useState({
     listingType: "all",
     category: "all",
     country: "",
   });
 
-  const isOpen = useSelector(state => state.isOpen);
+  const [selectedListing, setSelectedListing] = useState(null);
 
-  const handleFilterChange = (e) => {
+   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters({ ...filters, [name]: value });
   };
@@ -220,6 +222,16 @@ const Ogolosh = () => {
     return matchesType && matchesCategory && matchesCountry;
   });
 
+const handleOpenModal = (listing) => {
+  setSelectedListing(listing);
+  dispatch(OpenModal(true));
+};
+
+const closeListingModal = () => {
+  setSelectedListing(null);
+  dispatch(CloseModal(false));
+};
+
   return (
     <div>
       <h1>Всі оголошення</h1>
@@ -242,7 +254,7 @@ const Ogolosh = () => {
       <div className="listings-section">
         {filteredListings.length > 0 ? (
           filteredListings.map((listing, index) => (
-            <div key={index} className="listing" onClick={() => dispatch(OpenModal(true))}>
+            <div key={index} className="listing" onClick={() => handleOpenModal(listing)}>
               <img src={listing.image} alt={listing.name} className="listing-image" />
               <h2>{listing.name}</h2>
               <p>{listing.location}</p>
@@ -254,7 +266,7 @@ const Ogolosh = () => {
         )}
       </div>
 
-      {isOpen && (
+      {isOpen && selectedListing && (
         <div className="modal">
           <div className="modal-content">
             <button className="close-button" onClick={() => dispatch(CloseModal(false))}>
