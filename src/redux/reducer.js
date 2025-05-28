@@ -1,3 +1,7 @@
+/* 
+
+Version Redux Toolkit
+
 import { createReducer } from "@reduxjs/toolkit";
 import { OpenModal, CloseModal } from "./action";
 
@@ -17,3 +21,4 @@ export const reducer = createReducer(initialState, (builder) => {
       state.selectedListing = null;
     });
 });
+ */

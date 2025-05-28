@@ -1,41 +1,6 @@
-import React, { useState } from "react";
-import "../styles/ogolosh.css";
-import img1 from "../assets/images/Welcomehotel.png";
-import img2 from "../assets/images/image_2.png";
-import img3 from "../assets/images/image3.png";
-import img4 from "../assets/images/img4.png";
-import img5 from "../assets/images/img5.jpg";
-import img6 from "../assets/images/img6.jpg";
-import img7 from "../assets/images/img7.jpg";
-import img8 from "../assets/images/img8.jpg";
-import img9 from "../assets/images/img9.jpg";
-import img10 from "../assets/images/img10.jpg";
-import img11 from "../assets/images/img11.jpg";
-import img12 from "../assets/images/img12.jpg";
-import img13 from "../assets/images/img13.jpg";
-import img14 from "../assets/images/img14.jpg";
-import img15 from "../assets/images/img15.jpg";
-import img16 from "../assets/images/img16.jpg";
-import { useDispatch, useSelector } from "react-redux";
-import { closeModal, openModal, selectListing } from "../redux/modalSlice";
+import { createSlice } from "@reduxjs/toolkit";
 
-const Ogolosh = () => {
-  const dispatch = useDispatch();
-  const isOpen = useSelector(state => state.modal.isOpen);
-  const selectedListing = useSelector(state => state.modal.selectedListing)
-  const [filters, setFilters] = useState({
-    listingType: "all",
-    category: "all",
-    country: "",
-  });
-console.log("UPDATE:",selectedListing)
-
-   const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    setFilters({ ...filters, [name]: value });
-  };
-
-  const listings = [
+const initialState =  [
     {
       name: "ENA Chalets",
       location: "Lido di Spina, Italy",
@@ -212,81 +177,14 @@ console.log("UPDATE:",selectedListing)
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
-  ];
+  ]
 
-  const filteredListings = listings.filter((listing) => {
-    const matchesType = filters.listingType === "all" || listing.type === filters.listingType;
-    const matchesCategory = filters.category === "all" || listing.category === filters.category;
-    const matchesCountry = listing.country.toLowerCase().includes(filters.country.toLowerCase());
-    return matchesType && matchesCategory && matchesCountry;
-  });
+const advertSlice = createSlice({
+    name: "advert",
+    initialState,
+    reducers: {
+        
+    }
+})
 
-const handleOpenModal = (listing) => {
-  console.log(listing)
-  dispatch(selectListing(listing));
-  console.log(selectListing(listing))
-  dispatch(openModal(true));
-};
-
-const closeListingModal = () => {
-  selectListing(null);
-  dispatch(closeModal(false));
-};
-
-  return (
-    <div>
-      <h1>Всі оголошення</h1>
-
-      <div className="filter-section">
-        <select name="listingType" onChange={handleFilterChange}>
-          <option value="all">Всі оголошення</option>
-          <option value="offering">Пропонують</option>
-          <option value="lookingFor">Шукають</option>
-        </select>
-        <select name="category" onChange={handleFilterChange}>
-          <option value="all">Усі категорії</option>
-          <option value="house">Будинок</option>
-          <option value="apartment">Квартира</option>
-          <option value="studio">Студія</option>
-        </select>
-        <input type="text" name="country" placeholder="Країна" onChange={handleFilterChange} />
-      </div>
-
-      <div className="listings-section">
-        {filteredListings.length > 0 ? (
-          filteredListings.map((listing, index) => (
-            <div key={index} className="listing" onClick={() => handleOpenModal(listing)}>
-              <img src={listing.image} alt={listing.name} className="listing-image" />
-              <h2>{listing.name}</h2>
-              <p>{listing.location}</p>
-              <p>Рейтинг: {listing.rating}</p>
-            </div>
-          ))
-        ) : (
-          <p>Немає оголошень, що відповідають вибраним фільтрам.</p>
-        )}
-      </div>
-
-      {isOpen && selectedListing && (
-        <div className="modal">
-          <div className="modal-content">
-            <button className="close-button" onClick={() => dispatch(closeModal(false))}>
-              ×
-            </button>
-            <h2>{selectedListing.name}</h2>
-            <img src={selectedListing.image} alt={selectedListing.name} className="modal-image" />
-            <p><strong>Локація:</strong> {selectedListing.location}</p>
-            <p><strong>Опис:</strong> {selectedListing.description}</p>
-            <p><strong>Ціна:</strong> {selectedListing.price}</p>
-            <div className="btncont">
-              <button className="modal-button">Додати до обраного</button>
-              <button className="modal-button">Забронювати</button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default Ogolosh;
+export const advertReducer =  advertSlice.reducer
