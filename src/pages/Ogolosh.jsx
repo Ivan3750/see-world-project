@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/ogolosh.css";
 import img1 from "../assets/images/Welcomehotel.png";
 import img2 from "../assets/images/image_2.png";
@@ -28,7 +28,7 @@ const Ogolosh = () => {
     category: "all",
     country: "",
   });
-console.log("UPDATE:",selectedListing)
+
 
    const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -223,15 +223,16 @@ console.log("UPDATE:",selectedListing)
 
 const handleOpenModal = (listing) => {
   console.log(listing)
-  dispatch(selectListing(listing));
-  console.log(selectListing(listing))
-  dispatch(openModal(true));
+dispatch(selectListing(listing));
+dispatch(openModal(listing));
+
 };
 
 const closeListingModal = () => {
-  selectListing(null);
-  dispatch(closeModal(false));
+  dispatch(selectListing(null));
+dispatch(closeModal());
 };
+
 
   return (
     <div>
@@ -270,7 +271,7 @@ const closeListingModal = () => {
       {isOpen && selectedListing && (
         <div className="modal">
           <div className="modal-content">
-            <button className="close-button" onClick={() => dispatch(closeModal(false))}>
+            <button className="close-button" onClick={() => closeListingModal()}>
               ×
             </button>
             <h2>{selectedListing.name}</h2>

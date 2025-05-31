@@ -10,21 +10,20 @@ const modalSlice = createSlice({
   initialState,
   reducers: {
     openModal(state, action) {
-      state.isOpen = true;
+  state.isOpen = true;
+  state.selectedListing = action.payload; 
+},
+closeModal(state) {
+  state.isOpen = false;
+  state.selectedListing = null;
+},
+
+    selectListing(state, action) {
       state.selectedListing = action.payload;
     },
-
-    closeModal(state, action) {
-      state.isOpen = false;
-      state.selectedListing = null;
-    },
-    selectListing(state, action){
-        state.selectedListing = action.payload
-        console.log(state.selectedListing)
-    }
   },
 });
 
-export const {openModal, closeModal, selectListing} = modalSlice.actions
+export const { openModal, closeModal, selectListing } = modalSlice.actions;
 
-export const modalReducer = modalSlice.reducer
+export const modalReducer = modalSlice.reducer;
