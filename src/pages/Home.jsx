@@ -4,6 +4,7 @@ import Img3 from "../assets/3.jpg";
 import Img4 from "../assets/4.jpg";
 import LastAdvert from "../components/LastAdvert";
 import PopularPlaces from "../components/PopularPlaces"
+import Favorites from "./Favorites";
 
 const Home = () => {
   return (
@@ -68,6 +69,7 @@ const Home = () => {
       
       <PopularPlaces></PopularPlaces>
       <LastAdvert></LastAdvert>
+      <Favorites></Favorites>
     </>
   );
 };

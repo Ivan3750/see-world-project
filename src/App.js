@@ -1,6 +1,7 @@
 import {  Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import './App.css';
 import React, {  lazy } from 'react';
+import Favorites from './pages/Favorites';
 
 
 const Home = lazy(() => import('./pages/Home')); 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/regestation" element={<Regestation />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/reset" element={<Reset />} />
+          <Route path="/favorites" element={<Favorites/>} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

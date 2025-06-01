@@ -8,7 +8,21 @@ import Horison from "../assets/Horison Blu.jpg";
 import Gran from "../assets/Gran Hotel.jpg";
 import Cala from "../assets/Cala Moresca.jpg";
 import { Link } from "react-router-dom";
-import Star from "../assets/star.svg"
+import Star from "../assets/star.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter } from "../redux/filterSlice";
+import { makeFavorite } from "../redux/favoritesSlice";
+
+
+
+
+
+
+const LastAdvert = () => {
+
+
+  const name = useSelector(state => state.filter.name)
+const dispatch = useDispatch()
 const HotelsList = [
   {
     name: "Vila Gale Lagos Hotel",
@@ -46,9 +60,17 @@ const HotelsList = [
   { name: "KViHotel", img: KViHotel, place: "Madrid, Spain", rating: "7,2" },
 ];
 
-const LastAdvert = () => {
+console.log(name)
+const FilteredHotelsList = HotelsList.filter((hotel) => hotel.place.includes(name))
+
+const FilteredName = (e)=>{
+  e.preventDefault()
+  dispatch(setFilter(e.target.elements.name.value))
+}
+
   return (
     <>
+
       <section>
         <div className="flex justify-between items-center mb-[20px]">
           <h2 className="font-bold text-[32px] text-[#111111]">
@@ -62,19 +84,37 @@ const LastAdvert = () => {
             Відкрити всі оголошення
           </Link>
         </div>
+
+
+
+        <div className="flex items-center justify-between m-2 gap-3"> 
+          <form onSubmit={FilteredName}>
+          <input type="text" name="name" placeholder="Назва країни" id="" />
+          <button type="submit" className="border border-[#266294] text-[#266294] font-bold text-lg w-[209px] h-[44px]">Сортувати</button>
+          </form>
+        </div>
+
+
+
         <div className="flex justify-between items-center flex-wrap gap-[20px]">
-          {HotelsList.map((h, i) => 
-            (<div key={i}>
+          {FilteredHotelsList.map((h, i) => (
+            <div key={i}>
               <img src={h.img} alt={h.name} />
               <div>
                 <p className="text-[16px] text-[#111111] font-bold">{h.name}</p>
-                <p className="text-[16px] text-[#766F6F] font-bold">{h.place}</p>
-                <div className="flex gap-1"><img src={Star} alt="rating" />
-                <p className="text-[14px] text-[#266294] font-bold">{h.rating}</p>
+                <p className="text-[16px] text-[#766F6F] font-bold">
+                  {h.place}
+                </p>
+                <div className="flex gap-1">
+                  <img src={Star} alt="rating" />
+                  <p className="text-[14px] text-[#266294] font-bold">
+                    {h.rating}
+                  </p>
+                  <button onClick={()=> dispatch(makeFavorite(h))}>Favorite</button>
                 </div>
               </div>
-            </div>)
-          )}
+            </div>
+          ))}
         </div>
       </section>
     </>

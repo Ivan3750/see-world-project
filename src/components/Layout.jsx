@@ -57,7 +57,7 @@ const Layout = () => {
               Всі оголошення
             </NavLink>
             <NavLink
-              to="/favorite"
+              to="/favorites"
               className="text-lg font-bold"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -93,10 +93,10 @@ const Layout = () => {
               <NavLink to="/ogolosh" className="text-lg font-bold">
                 Оголошення
               </NavLink>
-              <NavLink to="/favorite" className="text-lg font-bold">
+              <NavLink to="/favorites" className="text-lg font-bold">
                 Обранне
               </NavLink>
-              <NavLink to="/favorite" className="text-lg font-bold">
+              <NavLink to="/" className="text-lg font-bold">
                 Особистий каб.
               </NavLink>
             </nav>
