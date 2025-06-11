@@ -5,13 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-body{
-  background-color: #EBF8FF;
+body {
+  background-color: #ebf8ff;
 }
 
-.Hero{
+.Hero {
   background-image: url("./assets/Hero.png");
   height: calc(100dvh - 100px);
   width: 100%;
@@ -24,15 +22,15 @@ body{
   flex-direction: column;
 }
 
-section{
+section {
   padding: 40px 80px;
 }
 
-footer{
-  background: #CFE7F5;
+footer {
+  background: #cfe7f5;
 }
 
-input{
+input {
   background: transparent;
   border: 3px solid #266294;
   width: 100%;
@@ -42,7 +40,34 @@ input{
   padding: 12px 16px;
 }
 
-input::placeholder{
+input::placeholder {
   color: #266294;
+}
 
+input:focus, textarea:focus{
+  outline: none;
+}
+
+textarea{
+  resize: none;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 3px solid #266294;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+}
+
+
+
+
+.h2-create{
+  font-size: 22px;
+  font-weight: 700;
+  color: #111111;
+  margin: 20px 0;
 }
