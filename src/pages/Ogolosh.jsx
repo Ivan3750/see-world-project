@@ -25,7 +25,6 @@ const Ogolosh = () => {
   const isOpen = useSelector(state => state.modal.isOpen);
   const selectedListing = useSelector(state => state.modal.selectedListing)
   const adverts = useSelector(state => state.advert.list)
-  console.log(adverts)
   const [filters, setFilters] = useState({
     listingType: "all",
     category: "all",
@@ -223,6 +222,7 @@ const Ogolosh = () => {
 
   useEffect(()=>{
     dispatch(getAllAdvertThunk())
+   
   }, [])
 
 

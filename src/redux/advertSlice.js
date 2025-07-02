@@ -3,6 +3,7 @@ import { getAllAdverts } from "../api/getAllAdverts";
 
 export const getAllAdvertThunk = createAsyncThunk(() => getAllAdverts());
 
+
 const initialState = {
   list: [],
   isLoading: "",
@@ -14,7 +15,12 @@ const advertSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getAllAdvertThunk.fulfilled, (state, action) => {
+      console.log(action.payload)
       state.list.push(action.payload);  /* state.list = action.payload */
+    });
+    builder.addCase(getAllAdvertThunk.rejected, (state, action) => {
+      console.log("error")
+      
     });
   },
 });
