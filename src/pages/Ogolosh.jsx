@@ -18,11 +18,14 @@ import img15 from "../assets/images/img15.jpg";
 import img16 from "../assets/images/img16.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal, openModal, selectListing } from "../redux/modalSlice";
+import { getAllAdvertThunk } from "../redux/advertSlice";
 
 const Ogolosh = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector(state => state.modal.isOpen);
   const selectedListing = useSelector(state => state.modal.selectedListing)
+  const adverts = useSelector(state => state.advert.list)
+  console.log(adverts)
   const [filters, setFilters] = useState({
     listingType: "all",
     category: "all",
@@ -35,7 +38,7 @@ const Ogolosh = () => {
     setFilters({ ...filters, [name]: value });
   };
 
-  const listings = [
+/*   const listings = [
     {
       name: "ENA Chalets",
       location: "Lido di Spina, Italy",
@@ -212,9 +215,18 @@ const Ogolosh = () => {
       description: "Чудова квартира з усіма необхідними зручностями.",
       price: "320$ за три доби",
     },
-  ];
+  ]; */
 
-  const filteredListings = listings.filter((listing) => {
+
+
+
+
+  useEffect(()=>{
+    dispatch(getAllAdvertThunk())
+  }, [])
+
+
+  const filteredListings = adverts.filter((listing) => {
     const matchesType = filters.listingType === "all" || listing.type === filters.listingType;
     const matchesCategory = filters.category === "all" || listing.category === filters.category;
     const matchesCountry = listing.country.toLowerCase().includes(filters.country.toLowerCase());

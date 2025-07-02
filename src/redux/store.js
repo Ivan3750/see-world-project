@@ -15,6 +15,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { advertReducer } from "./advertSlice";
 
 
 
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   modal: modalReducer,
   filter: filterReducer,
   favorites: favoritesReducer,
+  advert: advertReducer
 });
 
 const persistConfig = {
