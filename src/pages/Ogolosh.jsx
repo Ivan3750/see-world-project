@@ -24,7 +24,7 @@ const Ogolosh = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector(state => state.modal.isOpen);
   const selectedListing = useSelector(state => state.modal.selectedListing)
-  const adverts = useSelector(state => state.advert.list)
+  const adverts = useSelector(state => state.advert.list)[0]
   console.log(adverts)
   const [filters, setFilters] = useState({
     listingType: "all",
