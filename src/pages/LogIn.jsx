@@ -112,7 +112,7 @@ const Login = () => {
         Не маєте акаунту?
       </p>
       <Link
-        to="/regestation"
+        to="/Registration"
         className="text-[#766F6F] font-normal text-[18px] text-center block underline"
       >
         Зареєструйтесь

@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { modalReducer } from "./modalSlice";
 import { filterReducer } from "./filterSlice";
 import { favoritesReducer } from "./favoritesSlice";
-import {combineReducers } from '@reduxjs/toolkit';
+import { combineReducers } from '@reduxjs/toolkit';
 
 import {
   persistStore,
@@ -16,18 +16,18 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { advertReducer } from "./advertSlice";
-
+import { authReducer } from "./authSlice";
 
 
 const rootReducer = combineReducers({
   modal: modalReducer,
   filter: filterReducer,
   favorites: favoritesReducer,
-  advert: advertReducer
+  advert: advertReducer,
+  auth: authReducer,
 });
 
 const persistConfig = {
-  
   key: "root",
   storage,
 };

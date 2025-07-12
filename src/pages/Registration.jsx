@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-const Regestation = () => {
+// akshewally its spelle Registration 🤓
+const Registration = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -145,4 +146,4 @@ const Regestation = () => {
   )
 }
 
-export default Regestation
+export default Registration
