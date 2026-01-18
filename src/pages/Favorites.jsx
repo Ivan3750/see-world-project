@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import Star from "../assets/star.svg";
-import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom"
+import Star from "../assets/star.svg"
+import { useDispatch, useSelector } from "react-redux"
 
 
 const Favorites = () => {
@@ -42,7 +42,7 @@ console.log(favoriteList)
           ))}
         </div>
 </section>
-    </> );
+    </> )
 }
  
-export default Favorites;
+export default Favorites

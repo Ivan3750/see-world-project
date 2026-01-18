@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import upload from "../assets/upload.svg"
 const CreateAdvert = () => {
   const [formData, setFormData] = useState({
@@ -18,12 +18,12 @@ const CreateAdvert = () => {
     description: "",
     email: "",
     photos: [],
-  });
+  })
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   const handleCheckboxChange = (type) => {
     setFormData((prev) => ({
@@ -34,28 +34,28 @@ const CreateAdvert = () => {
         ),
         [type]: true,
       },
-    }));
-  };
+    }))
+  }
 
   const handleNumberChange = (field, direction) => {
     setFormData((prev) => ({
       ...prev,
       [field]: Math.max(1, prev[field] + (direction === "inc" ? 1 : -1)),
-    }));
-  };
+    }))
+  }
 
   const handleFileChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       photos: Array.from(e.target.files),
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Дані форми:", formData);
-    alert("Форма відправлена! 🔥");
-  };
+    e.preventDefault()
+    console.log("Дані форми:", formData)
+    alert("Форма відправлена! 🔥")
+  }
 
   return (
     <section>
@@ -214,7 +214,7 @@ const CreateAdvert = () => {
         </div>
       </form>
     </section>
-  );
-};
+  )
+}
 
-export default CreateAdvert;
+export default CreateAdvert

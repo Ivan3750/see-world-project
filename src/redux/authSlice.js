@@ -1,5 +1,5 @@
 
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
   isLogged: false,
@@ -18,19 +18,19 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     signUp(state, action) {
-      state.isLogged = true;
-      state.user = action.payload;
+      state.isLogged = true
+      state.user = action.payload
     },
     logIn(state, action) {
       /* no pass check for now */
-      state.isLogged = true;
-      state.user = action.payload;
+      state.isLogged = true
+      state.user = action.payload
     },
     logOut(state, action) {
-      state = initialState; // i mean it works. 😁
+      state = initialState // i mean it works. 😁
     },
   }
 })
 
-export const {logIn} = favoritesSlice.actions
-export const authReducer = authSlice.reducer;
+/* export const {logIn} = favoritesSlice.actions
+ */export const authReducer = authSlice.reducer

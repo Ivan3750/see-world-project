@@ -1,16 +1,16 @@
-import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
-import './App.css';
-import { lazy } from 'react';
-import Favorites from './pages/Favorites';
-import CreateAdvert from './components/CreateAdvert';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom'
+import './App.css'
+import { lazy } from 'react'
+import Favorites from './pages/Favorites'
+import CreateAdvert from './components/CreateAdvert'
 
 
-const Home = lazy(() => import('./pages/Home')); 
-const Layout = lazy(() => import('./components/Layout')); 
-const Ogolosh = lazy(() => import('./pages/Ogolosh'));
-const Registration = lazy(() => import('./pages/Registration'));
-const LogIn = lazy(() => import('./pages/LogIn'));
-const Reset = lazy(() => import('./pages/Reset'));
+const Home = lazy(() => import('./pages/Home')) 
+const Layout = lazy(() => import('./components/Layout')) 
+const Ogolosh = lazy(() => import('./pages/Ogolosh'))
+const Registration = lazy(() => import('./pages/Registration'))
+const LogIn = lazy(() => import('./pages/LogIn'))
+const Reset = lazy(() => import('./pages/Reset'))
 
 
 
@@ -30,7 +30,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

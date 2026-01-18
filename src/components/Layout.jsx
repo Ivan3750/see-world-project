@@ -1,12 +1,12 @@
-import { NavLink, Outlet } from "react-router-dom";
-import logo from "../assets/logo.png";
-import { useState } from "react";
-import Facebook from "../assets/facebook.svg";
-import YouTube from "../assets/youtube.svg";
-import Instagram from "../assets/instagram.svg";
-import X from "../assets/x.svg";
+import { NavLink, Outlet } from "react-router-dom"
+import logo from "../assets/logo.png"
+import { useState } from "react"
+import Facebook from "../assets/facebook.svg"
+import YouTube from "../assets/youtube.svg"
+import Instagram from "../assets/instagram.svg"
+import X from "../assets/x.svg"
 const Layout = () => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <>
@@ -111,7 +111,7 @@ const Layout = () => {
         <p className="mt-[20px]">©Всі права захищені.</p>
       </footer>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

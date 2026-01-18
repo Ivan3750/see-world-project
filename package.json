@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "/see-world-project",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/postcss": "^4.1.4",
@@ -35,6 +36,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+
+    
   },
   "eslintConfig": {
     "extends": [

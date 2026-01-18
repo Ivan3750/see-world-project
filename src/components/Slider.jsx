@@ -1,36 +1,36 @@
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import Arrow from "../assets/arrow.png";
+import { useState, useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
+import Arrow from "../assets/arrow.png"
 
 export default function Slider({ title, cities }) {
-  const [slidesToShow, setSlidesToShow] = useState(1);
-  const [index, setIndex] = useState(0);
-  const containerRef = useRef();
+  const [slidesToShow, setSlidesToShow] = useState(1)
+  const [index, setIndex] = useState(0)
+  const containerRef = useRef()
 
   useEffect(() => {
     const handleResize = () => {
-      const width = window.innerWidth;
-      if (width >= 1024) setSlidesToShow(3);
-      else if (width >= 640) setSlidesToShow(2);
-      else setSlidesToShow(1);
-    };
+      const width = window.innerWidth
+      if (width >= 1024) setSlidesToShow(3)
+      else if (width >= 640) setSlidesToShow(2)
+      else setSlidesToShow(1)
+    }
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   const next = () => {
     if (index < cities.length - slidesToShow) {
-      setIndex(index + 1);
+      setIndex(index + 1)
     }
-  };
+  }
 
   const prev = () => {
     if (index > 0) {
-      setIndex(index - 1);
+      setIndex(index - 1)
     }
-  };
+  }
 
   return (
     <div className="w-full overflow-hidden px-4 mb-[40px]">
@@ -87,5 +87,5 @@ export default function Slider({ title, cities }) {
         </button>
       </div>
     </div>
-  );
+  )
 }

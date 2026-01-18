@@ -1,12 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Play:regular,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import "normalize.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @import url(https://fonts.googleapis.com/css?family=Play:regular,700)
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic)
+@import "normalize.css"
+@tailwind base
+@tailwind components
+@tailwind utilities */
 
 body {
   background-color: #ebf8ff;
+}
+
+/* затемнення картинок */
+.dark-img {
+  filter: brightness(70%);
 }
 
 .Hero {
@@ -44,11 +49,12 @@ input::placeholder {
   color: #266294;
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
   outline: none;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
@@ -62,10 +68,7 @@ input[type="checkbox"] {
   -o-appearance: none;
 }
 
-
-
-
-.h2-create{
+.h2-create {
   font-size: 22px;
   font-weight: 700;
   color: #111111;
